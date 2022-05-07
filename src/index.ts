@@ -1,6 +1,6 @@
 import { environment } from '@/env'
 
-export async function main() {
+export function main() {
   return environment.MY_ENV_VARIABLE
 }
 
