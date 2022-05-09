@@ -1,16 +1,23 @@
 {
   "name": "typescript-template",
+  "exports": "./index.js",
   "scripts": {
-    "start": "yarn node-options & node dist/index.js",
+    "clean": "rimraf dist",
+    "compile": "cross-env-shell babel src -d dist --source-maps --extensions '.ts'",
+    "start": "yarn node-options && node dist/src/index.js",
     "test": "yarn node-options && vitest",
     "test-file": "yarn node-options && vitest $npm_config_path",
     "lint": "npx eslint --fix ./src",
-    "format": "npx prettier --write .",
-    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "tsnode": "yarn node-options && ts-node --skip-project -T -r tsconfig-paths/register $npm_config_path",
-    "node-options": "NODE_OPTIONS=\"--experimental-fetch --no-warnings\""
+    "format": "npx prettier --write ./src",
+    "typecheck": "tsc -p .",
+    "build": "yarn clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "tsnode": "yarn node-options && ts-node --esm -p --skip-project -T -r tsconfig-paths/register $npm_config_path",
+    "node-options": "NODE_OPTIONS=\"--experimental-fetch --no-warnings --experimental-specifier-resolution=node\""
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@swc/core": "^1.2.179",
+    "@types/babel-core": "^6.25.7",
     "@types/eslint": "^8.4.2",
     "@types/node": "^17.0.31",
     "@types/prettier": "^2.6.0",
@@ -20,6 +27,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
     "tsc-alias": "^1.6.7",
     "tsconfig-paths": "^4.0.0",
@@ -34,7 +42,6 @@
   "engineStrict": true,
   "version": "1.0.0",
   "description": "TypeScript template I use. TypeScript/ESLint/Prettier/dotenv/vitest",
-  "main": "index.js",
   "author": "o-az",
   "license": "GPL-3.0-or-later"
 }

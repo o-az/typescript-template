@@ -6,6 +6,7 @@
     "strict": true,
     "pretty": true,
     "baseUrl": ".",
+    "allowJs": true,
     "outDir": "dist",
     "declaration": true,
     "skipLibCheck": true,
@@ -24,13 +25,16 @@
     "preserveWatchOutput": true,
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node"],
+    "types": ["@types/node"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["**/node_modules/**", "dist"],
   "include": ["src", "test"],
   "ts-node": {
     "swc": true,

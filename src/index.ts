@@ -3,9 +3,8 @@ import { environment } from '@/env'
 export function main() {
   return environment.MY_ENV_VARIABLE
 }
+console.log(main())
+// // yarn tsnode src/index.ts --watch
+// const getPosts = await fetch('https://jsonplaceholder.typicode.com/posts')
 
-// yarn tsnode src/index.ts --watch
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(res => res.json())
-  .then(console.log)
-  .catch(console.trace)
+// console.log(getPosts.json())
