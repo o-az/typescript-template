@@ -1,6 +1,7 @@
-import { environment } from '@/env'
+import 'dotenv/config';
 
 export function main() {
-  return environment.MY_ENV_VARIABLE
+  return process.env.MY_ENV_VARIABLE;
 }
-console.log(main())
+
+console.log(main());

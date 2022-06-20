@@ -1,6 +1,6 @@
 /** @type {import('@types/prettier').Config} */
 module.exports = {
-  semi: false,
+  semi: true,
   tabWidth: 2,
   useTabs: false,
   printWidth: 120,
@@ -17,6 +17,6 @@ module.exports = {
       options: {
         parser: 'typescript',
       },
-    },
+    }
   ],
 }

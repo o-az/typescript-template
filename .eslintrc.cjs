@@ -6,13 +6,14 @@ module.exports = {
     // browser: true, // Uncomment if your project involves frontend
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
+    'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
     'no-mixed-operators': 'off',
     'no-multiple-empty-lines': 'off',
     'no-unexpected-multiline': 'off',
@@ -33,4 +34,4 @@ module.exports = {
       },
     ],
   },
-}
+};
