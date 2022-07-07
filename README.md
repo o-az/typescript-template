@@ -1,5 +1,3 @@
-## WIP ⚠️
-
 # TypeScript Project Template
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
