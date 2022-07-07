@@ -1,4 +1,7 @@
+/// <reference types="vite/client" />
+
 import { defineConfig } from 'vitest/config'
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   test: { globals: true },
@@ -6,5 +9,5 @@ export default defineConfig({
   resolve: {
     alias: { '@': './src' },
   },
-  plugins: [],
+  plugins: [tsconfigPaths()],
 })

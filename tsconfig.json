@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "strict": true,
     "pretty": true,
     "baseUrl": ".",
@@ -38,20 +42,36 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": true,
-    "types": ["@types/node"],
+    "types": [
+      "@types/node",
+      "bun-types"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "exclude": ["**/node_modules/**", "dist"],
-  "include": ["src", "test"],
+  "exclude": [
+    "**/node_modules/**",
+    "dist"
+  ],
+  "include": [
+    "src",
+    "test",
+    "environment.d.ts"
+  ],
   "ts-node": {
     "swc": true,
     "esm": true,
     "transpileOnly": true,
-    "require": ["tsconfig-paths/register"],
+    "require": [
+      "tsconfig-paths/register"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   }
 }

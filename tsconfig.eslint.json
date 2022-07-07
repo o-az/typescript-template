@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["@types/node"],
+    "types": ["@types/node", "bun-types"],
     "strict": true,
     "noEmit": true,
     "allowJs": true
@@ -11,8 +11,5 @@
     ".eslintrc.cjs",
     "vitest.config.ts",
     ".prettierrc.cjs",
-    ".babelrc.js",
-    "**/src/**/*.ts",
-    "**/src/**/*.d.ts"
   ]
 }

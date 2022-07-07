@@ -37,3 +37,4 @@ yarn-error.log*
 .scratch
 .scratch.*
 .scratch_*.*
+bun.lockb
