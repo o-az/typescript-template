@@ -1,6 +1,6 @@
 {
   "name": "@o-az/typescript-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A template for Node.js projects using TypeScript, ESM, CJS, Pnpm, and Vitest",
   "repository": "github:o-az/typescript-template",
   "type": "module",
